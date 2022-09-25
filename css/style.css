@@ -1,0 +1,148 @@
+/* ----------Global Setting--------*/
+body {
+    margin: 0;
+    background-color: #1a2435;
+    color: #F2F2F2;
+}
+
+a {
+    text-decoration: none;
+    padding: 5px;
+    transition: 0.3s;
+}
+
+a:visited {
+    color: #F2F2F2;
+}
+
+a:hover {
+    border-style: none none solid none;
+    border-width: 2px;
+}
+
+
+/* ----------Bouton----------- */
+.button {
+    text-decoration: none;
+    border-radius: 15px;
+    padding: 1%;
+    border-style: solid;
+    border-color: #1a2435;
+    transition: 0.3s;
+    background-color: #EEEEEE;
+    margin: 10px;
+}
+
+.button:visited {
+    color: #00000049;
+    text-decoration: none;
+}
+
+.button:hover {
+    border-color: #F2F2F2;
+    border-style: solid;
+    background-color: #00000049;
+    color: #F2F2F2;
+    text-decoration: none;
+}
+
+/* -----------Page set up ----------------*/
+
+.menu {
+    overflow: hidden;
+    display: flex;
+    height: 8vh;
+    position: fixed;
+    align-items: center;
+    top: 0;
+    width: 100%;
+    background-color: #000000;
+}
+
+.menu h2 {
+    margin: 0 15px;
+}
+    
+.menu ul {
+    list-style: none;
+    margin: 0 0 0 auto;
+    padding: 0;
+}
+
+.menu ul li {
+    margin: auto 20px;
+    display: inline;
+}
+
+.container {
+    margin: 0 5%;
+}
+
+.accueil, .portfolio, .moi, .contact {
+    margin-top: 30px;
+    padding: 20px;
+    height: 100vh;
+}
+
+/* ----------Style--------- */
+
+.accueil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.accueil div {
+    background-color: #00000049;
+    border-radius: 15px;
+    width: 50%;
+    padding: 2%;
+}
+
+
+.moi {
+    display: flex;
+    align-items: center;
+}
+
+.presentation, .skills {
+    background-color: #00000049;
+    border-radius: 15px;
+    padding: 2%;
+    height: fit-content;
+    margin: 0 5px;
+}
+
+.presentation {
+    width: 70%;
+}
+
+.contact {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10% 0;
+}
+
+.myInfo, .form-contact {
+    background-color: #00000049;
+    border-radius: 15px;
+    padding: 2%;
+    height: fit-content;
+    margin: 0 5px;
+}
+
+.form-contact input {
+    border-radius: 15px;
+    margin: 5px 0 10px;
+    width: 100%;
+}
+
+.form-contact textarea {
+    resize: none;
+    border-radius: 15px;
+    height: 300px;
+    width: 500px;
+    margin: 5px 0 10px;
+}
+
