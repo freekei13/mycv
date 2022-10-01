@@ -3,24 +3,36 @@ body {
     margin: 0;
     background-color: #1a2435;
     color: #F2F2F2;
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    padding: 0;
+    border: 0;
 }
 
-a {
-    text-decoration: none;
-    padding: 5px;
-    transition: 0.3s;
+h1 {
+    font-weight: 700;
+}
+
+h2 {
+    font-weight: 500;
+}
+
+h3 {
+    font-weight: 400;
+}
+
+p {
+    font-weight: 100;
 }
 
 a:visited {
     color: #F2F2F2;
 }
 
-a:hover {
-    border-style: none none solid none;
-    border-width: 2px;
+hr {
+    border-style: solid none none none;
+    width: 50%;
 }
-
-
 /* ----------Bouton----------- */
 .button {
     text-decoration: none;
@@ -35,7 +47,6 @@ a:hover {
 
 .button:visited {
     color: #00000049;
-    text-decoration: none;
 }
 
 .button:hover {
@@ -43,10 +54,14 @@ a:hover {
     border-style: solid;
     background-color: #00000049;
     color: #F2F2F2;
-    text-decoration: none;
 }
 
-/* -----------Page set up ----------------*/
+.button:active {
+    border-color: #8BBCCC;
+    color: #8BBCCC;
+}
+
+/* -----------menu setup ----------------*/
 
 .menu {
     overflow: hidden;
@@ -59,13 +74,17 @@ a:hover {
     background-color: #000000;
 }
 
+.menuM {
+    display: none;
+}
+
 .menu h2 {
     margin: 0 15px;
 }
     
 .menu ul {
     list-style: none;
-    margin: 0 0 0 auto;
+    margin: 0 10px 0 auto;
     padding: 0;
 }
 
@@ -74,14 +93,37 @@ a:hover {
     display: inline;
 }
 
-.container {
-    margin: 0 5%;
+.menu a {
+    text-decoration: none;
+    padding: 10px;
+    transition: 0.4s;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: transparent;
 }
 
+.menu a:visited {
+    color: #F2F2F2;
+}
+
+.menu a:hover {
+    border-color: #F2F2F2;
+}
+
+.menu a:active {
+    border-color: #8BBCCC;
+    color: #8BBCCC;
+}
+
+
+
+/* ---------Page Setup ----------*/
+
+
+
 .accueil, .portfolio, .moi, .contact {
-    margin-top: 30px;
     padding: 20px;
-    height: 100vh;
+    width: auto;
 }
 
 /* ----------Style--------- */
@@ -91,50 +133,69 @@ a:hover {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    height: 100vh;
 }
 
 .accueil div {
-    background-color: #00000049;
+    background-color: #4c679356;
     border-radius: 15px;
     width: 50%;
     padding: 2%;
 }
 
+.go {
+    margin-top: 20px;
+}
+
+.portfolio {
+    display: flex;
+    flex-wrap: wrap;
+}
 
 .moi {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
+    padding: 10%;
+    justify-content: space-between;
 }
 
 .presentation, .skills {
-    background-color: #00000049;
+    background-color: #4c679356;
     border-radius: 15px;
     padding: 2%;
-    height: fit-content;
-    margin: 0 5px;
+    margin: 5px 5px;
 }
 
 .presentation {
-    width: 70%;
+    width: 40%;
+}
+
+.skills {
+    width: 40%;
 }
 
 .contact {
     display: flex;
-    justify-content: space-evenly;
-    padding: 10% 0;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 10%;
 }
 
 .myInfo, .form-contact {
-    background-color: #00000049;
+    background-color: #4c679356;
     border-radius: 15px;
     padding: 2%;
-    height: fit-content;
-    margin: 0 5px;
+    margin: 5px 5px;
+}
+
+.form-contact{
+    width: 40%;
 }
 
 .form-contact input {
     border-radius: 15px;
-    margin: 5px 0 10px;
+    margin: 5px 0px 10px;
     width: 100%;
 }
 
@@ -142,7 +203,69 @@ a:hover {
     resize: none;
     border-radius: 15px;
     height: 300px;
-    width: 500px;
+    width: 100%;
     margin: 5px 0 10px;
 }
 
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    
+    .menu ul {
+        display: none;
+   }
+
+   .menuM {
+        display: inline;
+        border-style: solid;
+        border-radius: 15px;
+        border-color: transparent;
+        margin: 0 10px 0 auto;
+        transition: 0.4s;
+   }
+
+   .menuM:hover {
+        border-color: #F2F2F2;
+   }
+
+   .accueil div {
+        width: 70%;
+        margin-bottom: 50px;
+   }
+
+   .moi {
+        flex-direction: column;
+   }
+
+   .presentation, .skills {
+        width: 100%;
+   }
+
+   .presentation {
+        margin-bottom: 30px;
+   }
+
+   .contact {
+        flex-direction: column;
+   }
+
+   .myInfo, .form-contact {
+        width: 100%;
+        padding-right: 3%;
+   }
+
+   .myInfo {
+        margin-bottom: 30px;
+   }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}
