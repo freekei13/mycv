@@ -31,6 +31,7 @@ function soundToPlay(yourSelector) {
 }
 
 function nextSequence() {
+    $("h2").removeClass("pressToStart");
     userClickedPattern = [];
     var randomNumber = Math.floor(Math.random() * $("button").length);
     var randomChosenCorlour = buttonColours[randomNumber];
@@ -53,7 +54,8 @@ function checkAnswer(currentLevel) {
         playSound.play();
         $("body").addClass("game-over");
         setTimeout(function(){$("body").removeClass("game-over")}, 200)
-        $("h2").text("Game Over, Press Any Key to Restart");
+        $("h2").text("Game Over, Press Here to Restart");
+        $("h2").addClass("pressToStart");
         StartOver();
         console.log("wrong");
     }
@@ -74,7 +76,7 @@ $("button").click(function(event) {
 });
 
 
-$(document).keypress(function(){
+$("h2").click(function(){
     if (!started) {
         setTimeout(function(){nextSequence()}, 1000);
         started = true;

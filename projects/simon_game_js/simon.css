@@ -6,6 +6,20 @@ h1 {
 h2 {
     font-size: 3rem;
     margin: 0;
+    
+}
+
+.pressToStart {
+    border: solid #fff;
+    border-radius: 15px;
+    box-shadow: 5px 10px #fff;
+}
+
+.pressToStart:active {
+    box-shadow: none;
+    position: relative;
+    left: 5px;
+    top: 10px;
 }
 
 h1,h2 {
